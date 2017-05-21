@@ -3,6 +3,7 @@ package net.flowdee.mytraffic;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private MyData myData;
     private String[] titleStrings, detailStrings;
     private int[] ints;
-
+    private ListView listView;
 
 
     @Override
@@ -21,8 +22,21 @@ public class MainActivity extends AppCompatActivity {
         // get value for MyData
         getValueMyData();
 
+        //Create listview
+        createListView();
 
     } // method main
+
+    private void createListView() {
+
+        //Initial View
+        listView = (ListView) findViewById(R.id.livTraffic);
+        myAdapter Adapter = new myAdapter(this, titleStrings, detailStrings,ints);
+        listView.setAdapter(Adapter);
+
+
+
+    }
 
     private void getValueMyData() {
         myData = new MyData();

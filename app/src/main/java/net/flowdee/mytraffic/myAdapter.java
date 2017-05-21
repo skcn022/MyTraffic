@@ -60,8 +60,10 @@ public class myAdapter extends BaseAdapter{
         // show view
         titleTextView.setText(titleStrings[position]);
 
-        String strShortDetail = detailStrings[i].substring(0, 35) + " ...";
+        String strShortDetail = detailStrings[position].substring(0, 35) + " ...";
+        detailTextView.setText(strShortDetail);
 
+        imageView.setImageResource(ints[position]);
 
 
         return view;
