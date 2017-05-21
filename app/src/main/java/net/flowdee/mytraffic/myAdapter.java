@@ -12,7 +12,7 @@ import android.widget.TextView;
  * Created by som on 21-May-17.
  */
 
-public class myAdapter extends BaseAdapter{
+public class MyAdapter extends BaseAdapter{
 
     private Context context;
     private String[] titleStrings, detailStrings;
@@ -20,7 +20,7 @@ public class myAdapter extends BaseAdapter{
     private TextView titleTextView, detailTextView;
     private ImageView imageView;
 
-    public myAdapter(Context context,
+    public MyAdapter(Context context,
                      String[] titleStrings,
                      String[] detailStrings,
                      int[] ints) {
